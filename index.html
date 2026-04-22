@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>貪吃蛇</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="hero">
+      <p class="eyebrow">Arcade Mini Game</p>
+      <h1>貪吃蛇</h1>
+      <p class="subtitle">吃掉光點、慢慢變長，別撞牆也別咬到自己。</p>
+    </section>
+
+    <section class="hud">
+      <div class="card">
+        <span class="label">分數</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="card">
+        <span class="label">最高分</span>
+        <strong id="best-score">0</strong>
+      </div>
+      <button id="restart-button" class="restart-button" type="button">重新開始</button>
+    </section>
+
+    <section class="game-area">
+      <div class="canvas-wrap">
+        <canvas id="game" width="480" height="480" aria-label="貪吃蛇遊戲畫面"></canvas>
+        <div id="overlay" class="overlay">
+          <h2 id="overlay-title">按方向鍵開始</h2>
+          <p id="overlay-text">用鍵盤方向鍵或 WASD 控制移動。</p>
+        </div>
+      </div>
+
+      <aside class="instructions">
+        <h2>玩法</h2>
+        <p>方向鍵 / <code>W A S D</code> 移動</p>
+        <p><code>Space</code> 暫停或繼續</p>
+        <p>撞到牆壁或自己的身體就結束</p>
+      </aside>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
